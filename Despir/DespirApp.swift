@@ -49,12 +49,12 @@ struct ApplicationSwitcher: View {
       case .mainView:
         
         NavigationStack(path: $appRootManager.path) {
-          HomeView()
+          MainContainerView()
         }
-      case .forgotPassword:
-        NavigationStack(path: $appRootManager.path) {
-         // ForgotPasswordView()
-        }
+//      case .forgotPassword:
+//        NavigationStack(path: $appRootManager.path) {
+//         // ForgotPasswordView()
+//        }
       }
     }
 }

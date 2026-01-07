@@ -12,10 +12,9 @@ import SwiftUI
 final class AppRootManager: ObservableObject {
   @Published var path = NavigationPath()
   @Published var currentRoot: eAppRoots = .splash
-  
+  // For setting rootview.
     enum eAppRoots {
         case splash
-        case forgotPassword
         case login
         case mainView
     }
@@ -25,15 +24,21 @@ final class AppRootManager: ObservableObject {
      }
 
      func pop() {
+       if path.count > 1 {
          path.removeLast()
+       }
      }
 
      func reset() {
          path = NavigationPath()
      }
 }
-
+// For push.
 enum Route: Hashable {
     case verification
+    case forgotPassword
+    case changePassword
+    case resetPassword
     case settings
+    case profile
 }

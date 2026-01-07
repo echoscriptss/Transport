@@ -13,7 +13,6 @@ struct SplashView: View {
   @EnvironmentObject var appRootManager: AppRootManager
   
     var body: some View {
-
         Text("Despir")
           .font(.system(size: 36.0).bold())
       .onAppear{

@@ -11,6 +11,7 @@ private enum Defaults: String {
    
     case isUserLoggedIn = "isUserLoggedIn"
     case userToken = "token"
+    case userUuid = "userUuid"
 }
 
 final class DataManager {
@@ -37,4 +38,36 @@ final class DataManager {
       }
   }
   
+  static var userToken: String? {
+      get {
+        return _get(valueForKay: .userToken) as? String
+      }
+      set {
+          _set(value: newValue, key: .userToken)
+      }
+  }
+  
+  static var userUuid: String? {
+      get {
+        return _get(valueForKay: .userUuid) as? String
+      }
+      set {
+          _set(value: newValue, key: .userUuid)
+      }
+  }
+}
+
+struct DefaultStore {
+    static let key = "default_user_type"
+
+    static func save(_ type: UserType) {
+        UserDefaults.standard.set(type.rawValue, forKey: key)
+    }
+
+    static func load() -> UserType? {
+        guard let value = UserDefaults.standard.string(forKey: key) else {
+            return nil
+        }
+        return UserType(rawValue: value)
+    }
 }

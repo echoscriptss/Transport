@@ -27,7 +27,6 @@ struct VerifyResponseModel: Decodable {
 struct VerifyDataModel: Decodable {
   let success: Bool?
   let message: String?
-  
   let token: String?
   let profile: VerifyProfileModel?
   
@@ -39,7 +38,7 @@ struct VerifyProfileModel: Decodable {
   let firstName: String?
   let lastName: String?
   let email: String?
-  
+  let phone: String?
 }
 
 struct ResendOtpResponseModel: Decodable {
