@@ -35,6 +35,7 @@ final class AppRootManager: ObservableObject {
 enum Route: Hashable {
     case verification
     case ForgotPassword
+    case changePassword
    // case ResetPassword
     case settings
 }

@@ -37,6 +37,16 @@ final class DataManager {
       }
   }
   
+  static var userToken: String? {
+      get {
+        return _get(valueForKay: .userToken) as? String
+      }
+      set {
+          _set(value: newValue, key: .userToken)
+      }
+  }
+  
+  
 }
 
 struct DefaultStore {
