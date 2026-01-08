@@ -13,6 +13,7 @@ enum EndPoint: Equatable {
     case resendOtpMfa
     case forgotPassword
     case getRoles // Temp for get par in httpmethod
+    case changePassword
     
     var endpoint: String {
         switch self {
@@ -26,12 +27,14 @@ enum EndPoint: Equatable {
             return "/user/forgot_password"
         case .getRoles:
             return "/user/all_roles"
+        case .changePassword:
+            return "/user/change_password"
         }
     }
     
     var httpMethod: HTTPMethod {
         switch self {
-        case .login, .verifyMfa, .resendOtpMfa, .forgotPassword :
+        case .login, .verifyMfa, .resendOtpMfa, .forgotPassword, .changePassword :
             return .POST
         case .getRoles:
             return .GET
@@ -48,6 +51,9 @@ enum EndPoint: Equatable {
             return nil
         }
         return url
+    }
+    var headers: [String:String] {
+      return ["Authorization":"Bearer \(DataManager.userToken ?? "")"]
     }
 }
 

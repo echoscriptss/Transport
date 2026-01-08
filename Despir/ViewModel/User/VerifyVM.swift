@@ -32,6 +32,8 @@ class VerifyVM: ObservableObject {
           if verifyData?.statusCode != nil {
             errorMessage = verifyData?.message
             showAlert = true
+          } else {
+            DataManager.userToken = verifyData?.data?.token
           }
           print(verifyData ?? "")
         } catch {

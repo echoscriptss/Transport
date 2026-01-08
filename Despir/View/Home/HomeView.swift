@@ -15,6 +15,17 @@ struct HomeView: View {
         Text("Home Screen")
           .font(.system(size: 36.0).bold())
         Spacer()
+        Text("Long press for settings")
+          .font(.system(size: 20.0).bold())
+          .contextMenu {
+            Button("Update Profile") {
+              
+            }
+            Button("Change Password") {
+              appRootManager.push(.changePassword)
+            }
+          }
+        Spacer()
         Button {
           DataManager.isUserLoggedIn = false
           appRootManager.currentRoot = .login
@@ -24,6 +35,11 @@ struct HomeView: View {
             
         }
         Spacer()
+      }
+      .navigationDestination(for: Route.self) { route in
+          if route == .changePassword {
+              ChangePasswordView()
+          }
       }
     }
 }
