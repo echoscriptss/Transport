@@ -508,13 +508,13 @@
 				EC9BD28B2F0E84B100B4611A /* ForgotPasswordModel.swift in Sources */,
 
 				002A94812F0FA7E2008816B6 /* ChangePasswordView.swift in Sources */,
-
 				005F93002EF3CDEA00315ED4 /* UserModel.swift in Sources */,
 				00694E362EF27BFD0008927D /* Utils.swift in Sources */,
 				EC9BD2892F0E843300B4611A /* ForgotPasswordViewModel.swift in Sources */,
 				00D875462EF92D450032D020 /* LoginVM.swift in Sources */,
 				EC9BD2862F0E721A00B4611A /* AsyncActionButton.swift in Sources */,
 
+				002A94842F0FA9A2008816B6 /* ChangePasswordVM.swift in Sources */,
 				00C843022F0E274F0020587D /* VerifyView.swift in Sources */,
 				005F92FD2EF3CDB300315ED4 /* UserRepository.swift in Sources */,
 				EC9BD2952F0FD0FF00B4611A /* VerifyOTPModel.swift in Sources */,
