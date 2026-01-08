@@ -21,19 +21,19 @@ class LoginVM: ObservableObject {
   
 
   
-  func callLoginApi() async {
+    func callLoginApi(email: String, password: String) async {
     
-    let inputData = LoginInputModel(email: "prabwh@yopmail.com", password: "Test@1234")
+    let inputData = LoginInputModel(email: email, password: password)
         do {
           loginData = try await APIManager.shared.request(url: EndPoint.login.url, methodType: EndPoint.login.httpMethod.rawValue, body: inputData, responseType: LoginResponseModel.self)
           if loginData?.statusCode != nil {
             errorMessage = loginData?.message
-            showAlert = true
+            showAlert = true // ?
           }
           print(loginData ?? "")
         } catch {
             errorMessage = error.localizedDescription
-            showAlert = true
+            showAlert = true // ?
         }
     }
   
