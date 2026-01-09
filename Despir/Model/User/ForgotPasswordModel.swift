@@ -17,3 +17,4 @@ struct ForgotPasswordResponseModel: Decodable {
   let data: String?
   let statusCode: Int?
 }
+

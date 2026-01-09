@@ -39,6 +39,7 @@ class ChangePasswordVM: ObservableObject {
             errorMessage = error.localizedDescription
             isSuccess = false
             showAlert = true // ?
+            
         }
     }
 }

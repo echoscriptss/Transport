@@ -46,7 +46,6 @@ final class DataManager {
       }
   }
   
-  
 }
 
 struct DefaultStore {
