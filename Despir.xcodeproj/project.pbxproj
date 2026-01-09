@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002A94812F0FA7E2008816B6 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A94802F0FA7E2008816B6 /* ChangePasswordView.swift */; };
+		002A94842F0FA9A2008816B6 /* ChangePasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A94832F0FA9A2008816B6 /* ChangePasswordVM.swift */; };
+		002A94862F0FAC10008816B6 /* ChangePasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A94852F0FAC10008816B6 /* ChangePasswordModel.swift */; };
 		005F92FD2EF3CDB300315ED4 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F92FC2EF3CDB300315ED4 /* UserRepository.swift */; };
 		005F93002EF3CDEA00315ED4 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F92FF2EF3CDEA00315ED4 /* UserModel.swift */; };
 		005F93022EF3D3CF00315ED4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F93012EF3D3CF00315ED4 /* DataManager.swift */; };
@@ -60,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		002A94802F0FA7E2008816B6 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		002A94832F0FA9A2008816B6 /* ChangePasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVM.swift; sourceTree = "<group>"; };
+		002A94852F0FAC10008816B6 /* ChangePasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordModel.swift; sourceTree = "<group>"; };
 		005F92FC2EF3CDB300315ED4 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		005F92FF2EF3CDEA00315ED4 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		005F93012EF3D3CF00315ED4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -136,6 +142,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		002A947F2F0FA799008816B6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				002A94802F0FA7E2008816B6 /* ChangePasswordView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		002A94822F0FA98C008816B6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				002A94832F0FA9A2008816B6 /* ChangePasswordVM.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		005F92FA2EF3CD6300315ED4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +182,7 @@
 				EC9BD28A2F0E84A800B4611A /* ForgotPasswordModel.swift */,
 				005F92FF2EF3CDEA00315ED4 /* UserModel.swift */,
 				0069BA232F0D52370059A012 /* VerifyModel.swift */,
+				002A94852F0FAC10008816B6 /* ChangePasswordModel.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -235,6 +258,7 @@
 				EC9BD2872F0E83D100B4611A /* CommonViews */,
 				00694E222EF27B280008927D /* User */,
 				005F93032EF3D5B500315ED4 /* Home */,
+				002A947F2F0FA799008816B6 /* Settings */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +266,7 @@
 		00694E242EF27B280008927D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				002A94822F0FA98C008816B6 /* Settings */,
 				00D875442EF92D300032D020 /* User */,
 			);
 			path = ViewModel;
@@ -471,6 +496,7 @@
 				EC9BD2992F0FF52F00B4611A /* ResetPasswordViewModel.swift in Sources */,
 				00694E2B2EF27B280008927D /* SplashView.swift in Sources */,
 				EC9BD28B2F0E84B100B4611A /* ForgotPasswordModel.swift in Sources */,
+				002A94812F0FA7E2008816B6 /* ChangePasswordView.swift in Sources */,
 				005F93002EF3CDEA00315ED4 /* UserModel.swift in Sources */,
 				00694E362EF27BFD0008927D /* Utils.swift in Sources */,
 				EC9BD2892F0E843300B4611A /* ForgotPasswordViewModel.swift in Sources */,
@@ -481,7 +507,12 @@
 				EC9BD2952F0FD0FF00B4611A /* VerifyOTPModel.swift in Sources */,
 				EC9BD28F2F0EDB5500B4611A /* ResetPasswordView.swift in Sources */,
 				EC9BD2932F0FC88000B4611A /* VerifyOTPViewModel.swift in Sources */,
+				002A94842F0FA9A2008816B6 /* ChangePasswordVM.swift in Sources */,
+				00C843022F0E274F0020587D /* VerifyView.swift in Sources */,
+				005F92FD2EF3CDB300315ED4 /* UserRepository.swift in Sources */,
+				EC9BD28F2F0EDB5500B4611A /* ResetPasswordView.swift in Sources */,
 				00694E2D2EF27B280008927D /* DespirApp.swift in Sources */,
+				002A94862F0FAC10008816B6 /* ChangePasswordModel.swift in Sources */,
 				00694E342EF27BB80008927D /* AppRootManager.swift in Sources */,
 				EC9BD29B2F0FF53C00B4611A /* ResetPasswordModel.swift in Sources */,
 				0069BA242F0D52370059A012 /* VerifyModel.swift in Sources */,

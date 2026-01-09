@@ -33,7 +33,10 @@ final class AppRootManager: ObservableObject {
 }
 // For push.
 enum Route: Hashable {
-    case Verification
-    case ForgotPassword
     case ResetPassword
+    case verification
+    case ForgotPassword
+    case changePassword
+   // case ResetPassword
+    case settings
 }

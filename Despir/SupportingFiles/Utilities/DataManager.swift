@@ -37,6 +37,31 @@ final class DataManager {
       }
   }
   
+  static var userToken: String? {
+      get {
+        return _get(valueForKay: .userToken) as? String
+      }
+      set {
+          _set(value: newValue, key: .userToken)
+      }
+  }
+  
+  
+}
+
+struct DefaultStore {
+    static let key = "default_user_type"
+
+    static func save(_ type: UserType) {
+        UserDefaults.standard.set(type.rawValue, forKey: key)
+    }
+
+    static func load() -> UserType? {
+        guard let value = UserDefaults.standard.string(forKey: key) else {
+            return nil
+        }
+        return UserType(rawValue: value)
+    }
 }
 
 struct DefaultStore {
