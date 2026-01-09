@@ -9,6 +9,8 @@ import SwiftUI
 import APIManager
 import ValidationManager
 
+
+
 struct LoginView: View {
     @EnvironmentObject var appRootManager: AppRootManager
     @StateObject private var viewModel = LoginVM()
@@ -17,6 +19,7 @@ struct LoginView: View {
     //    @State private var username = "Prabwh@yopmail.com"
     @State private var password = "Test@1234"
     let emailValidator = EmailValidator()
+
 
 
     var body: some View {
@@ -53,6 +56,7 @@ struct LoginView: View {
                     .font(.caption)
                     .padding(.leading, 10)
             }
+
             SecureField("Password", text: $password)
                 .padding()
                 .background(Color(.systemGray6))
@@ -64,7 +68,8 @@ struct LoginView: View {
                 Task {
                     await viewModel.callLoginApi(email: username, password: password)
                     if viewModel.loginData != nil && viewModel.loginData?.statusCode == nil {
-                        appRootManager.push(.Verification)
+                        appRootManager.push(.verification)
+
                     }
                 }
             } label: {
@@ -74,6 +79,7 @@ struct LoginView: View {
             .frame(height: 44)
             .disabled(!isEmailValid || username.isEmpty)
             .opacity(isEmailValid && !username.isEmpty ? 1 : 0.5)
+
             .alert("Error", isPresented: $viewModel.showAlert) {
                 Button("OK", role: .cancel) { }
             } message: {
@@ -97,7 +103,8 @@ struct LoginView: View {
             Spacer()
         }
         .navigationDestination(for: Route.self) { route in
-            if route == .Verification {
+            if route == .verification {
+
                 VerifyView(viewModel: VerifyVM(temporaryToken: viewModel.loginData?.temporaryToken ?? ""))
             }
             else if route == .ForgotPassword {
@@ -112,8 +119,7 @@ struct LoginView: View {
     func save(_ type: UserType) {
         DefaultStore.save(type)
     }
-    
-    
+
 }
 
 

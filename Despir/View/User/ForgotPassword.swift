@@ -9,6 +9,7 @@ import SwiftUI
 import APIManager
 import ValidationManager
 
+
 struct ForgotPassword: View {
     @State private var email = "yogeshwh@yopmail.com"
     @State private var otp = ""
@@ -17,6 +18,7 @@ struct ForgotPassword: View {
 
     @ObservedObject var forgotPasswordViewModel = ForgotPasswordViewModel()
     @ObservedObject var verifyOTPViewModel = VerifyOTPViewModel()
+
     @EnvironmentObject var appRootManager: AppRootManager
 
     var body: some View {
@@ -49,6 +51,7 @@ struct ForgotPassword: View {
             if forgotPasswordViewModel.forgotPasswordData != nil {
                 TextField("Enter 6-digit code", text: $otp)
                     .keyboardType(.numberPad)
+
                     .textInputAutocapitalization(.none)
                     .autocorrectionDisabled()
                     .padding()
@@ -85,6 +88,7 @@ struct ForgotPassword: View {
                     
                     Text(verifyOTPViewModel.isSuccessOTP ? "\(verifyOTPViewModel.successMessage ?? "")" : "\(verifyOTPViewModel.errorMessage ?? "")")
                 }
+
                 
             } else {
                 Button {
@@ -106,6 +110,7 @@ struct ForgotPassword: View {
                 }
         }
             Spacer()
+
         }
 
     }

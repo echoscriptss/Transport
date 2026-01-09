@@ -8,6 +8,7 @@ import SwiftUI
 import APIManager
 import ValidationManager
 
+
 struct ResetPasswordView: View {
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
@@ -61,4 +62,5 @@ struct ResetPasswordView: View {
     
 #Preview {
     ResetPasswordView()
+
 }
