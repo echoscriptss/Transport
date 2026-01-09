@@ -15,7 +15,6 @@ class ForgotPasswordViewModel: ObservableObject {
     @Published var successMessage: String?
     @Published var showAlert: Bool = false
     @Published var isSuccess: Bool = false
-
     @Published var forgotPasswordData: ForgotPasswordResponseModel?
     
     
@@ -44,4 +43,6 @@ class ForgotPasswordViewModel: ObservableObject {
             isSuccess = showAlert
         }
     }
+    
+    
 }
