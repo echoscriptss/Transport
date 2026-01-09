@@ -11,7 +11,7 @@ import SwiftUI
 
 struct LoginView: View {
     @EnvironmentObject var appRootManager: AppRootManager
-    @StateObject private var viewModel = LoginVM()
+    @ObservedObject private var viewModel = LoginVM()
     @State private var username = "yogeshwh@yopmail.com"
     //    @State private var username = "Prabwh@yopmail.com"
     @State private var password = "Test@1234"

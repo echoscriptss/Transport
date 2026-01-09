@@ -11,7 +11,7 @@ struct VerifyView: View {
   
   //MARK: - Variables
   
-  @StateObject var viewModel = VerifyVM(temporaryToken: "")
+  @ObservedObject var viewModel = VerifyVM(temporaryToken: "")
   @EnvironmentObject var appRootManager: AppRootManager
   
   //MARK: - View

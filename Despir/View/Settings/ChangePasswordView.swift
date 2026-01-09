@@ -11,7 +11,7 @@ import ValidationManager
 struct ChangePasswordView: View {
   
   @EnvironmentObject var appRootManager: AppRootManager
-  @StateObject private var viewModel = ChangePasswordVM()
+  @ObservedObject private var viewModel = ChangePasswordVM()
   @State private var passwordMessage = String()
     var body: some View {
       VStack {
