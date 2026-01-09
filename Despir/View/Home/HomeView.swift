@@ -18,9 +18,10 @@ struct HomeView: View {
         Text("Long press for settings")
           .font(.system(size: 20.0).bold())
           .contextMenu {
+            
             Button("Update Profile") {
-              
             }
+            
             Button("Change Password") {
               appRootManager.push(.changePassword)
             }
