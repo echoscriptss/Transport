@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import ValidationManager
 
 struct ChangePasswordView: View {
   
   @EnvironmentObject var appRootManager: AppRootManager
   @StateObject private var viewModel = ChangePasswordVM()
-  
+  @State private var passwordMessage = String()
     var body: some View {
       VStack {
         Text("Change Password")
@@ -19,7 +20,7 @@ struct ChangePasswordView: View {
             .padding(.bottom,40)
         
         TextField("Old Password", text: $viewModel.oldPassword)
-            .textInputAutocapitalization(.none)
+            .textInputAutocapitalization(.never)
             .autocorrectionDisabled()
             .padding()
             .background(Color(.systemGray6))
@@ -27,21 +28,25 @@ struct ChangePasswordView: View {
             .padding([.leading,.trailing],10)
         
         TextField("Password", text: $viewModel.password)
-            .textInputAutocapitalization(.none)
+            .textInputAutocapitalization(.never)
             .autocorrectionDisabled()
             .padding()
             .background(Color(.systemGray6))
             .cornerRadius(8)
             .padding([.leading,.trailing],10)
         
+        if !passwordMessage.isEmpty {
+          Text(passwordMessage)
+            .foregroundStyle(.red)
+        }
         TextField("Confirm Password", text: $viewModel.confirmPassword)
-            .textInputAutocapitalization(.none)
+            .textInputAutocapitalization(.never)
             .autocorrectionDisabled()
             .padding()
             .background(Color(.systemGray6))
             .cornerRadius(8)
             .padding([.leading,.trailing],10)
-        
+            
         // Submit button
         AsyncActionButton {
             Task {
@@ -64,7 +69,9 @@ struct ChangePasswordView: View {
         } message: {
             Text(viewModel.errorMessage ?? "")
         }
-        
+        .onChange(of: viewModel.password) { _, newValue in
+          passwordMessage = PasswordValidator().validate(password: newValue).message
+        }
       }
     }
 }
