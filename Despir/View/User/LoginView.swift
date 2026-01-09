@@ -6,16 +6,22 @@
 //
 
 import SwiftUI
+import APIManager
+import ValidationManager
 
 
 
 struct LoginView: View {
     @EnvironmentObject var appRootManager: AppRootManager
     @StateObject private var viewModel = LoginVM()
+    @State private var isEmailValid = true
     @State private var username = "yogeshwh@yopmail.com"
     //    @State private var username = "Prabwh@yopmail.com"
     @State private var password = "Test@1234"
-    
+    let emailValidator = EmailValidator()
+
+
+
     var body: some View {
         VStack {
             Text("Login")
@@ -39,8 +45,18 @@ struct LoginView: View {
                 .background(Color(.systemGray6))
                 .cornerRadius(8)
                 .padding([.leading,.trailing],10)
-            
-            
+                .onChange(of: username) { _, newValue in
+                    isEmailValid = newValue.isEmpty
+                        ? true
+                        : emailValidator.isValid(email: newValue)
+                }
+            if !isEmailValid {
+                Text("Please enter a valid email address")
+                    .foregroundColor(.red)
+                    .font(.caption)
+                    .padding(.leading, 10)
+            }
+
             SecureField("Password", text: $password)
                 .padding()
                 .background(Color(.systemGray6))
@@ -53,6 +69,7 @@ struct LoginView: View {
                     await viewModel.callLoginApi(email: username, password: password)
                     if viewModel.loginData != nil && viewModel.loginData?.statusCode == nil {
                         appRootManager.push(.verification)
+
                     }
                 }
             } label: {
@@ -60,6 +77,9 @@ struct LoginView: View {
                     .frame(maxWidth: .infinity)
             }
             .frame(height: 44)
+            .disabled(!isEmailValid || username.isEmpty)
+            .opacity(isEmailValid && !username.isEmpty ? 1 : 0.5)
+
             .alert("Error", isPresented: $viewModel.showAlert) {
                 Button("OK", role: .cancel) { }
             } message: {
@@ -68,7 +88,7 @@ struct LoginView: View {
             
             // Forgot password
             AsyncActionButton {
-                appRootManager.push(.ForgotPassword)
+                appRootManager.push(.forgotPassword)
             } label: {
                 Text("Forgot Password")
                     .frame(maxWidth: .infinity)
@@ -84,16 +104,22 @@ struct LoginView: View {
         }
         .navigationDestination(for: Route.self) { route in
             if route == .verification {
+
                 VerifyView(viewModel: VerifyVM(temporaryToken: viewModel.loginData?.temporaryToken ?? ""))
             }
-            else if route == .ForgotPassword {
+            else if route == .forgotPassword {
                 ForgotPassword()
+            }
+            else if route == .resetPassword {
+                ResetPasswordView()
             }
         }
     }
+    
     func save(_ type: UserType) {
         DefaultStore.save(type)
     }
+
 }
 
 
