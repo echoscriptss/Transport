@@ -36,7 +36,7 @@ class VerifyOTPViewModel: ObservableObject {
         catch {
             errorMessage = error.localizedDescription
             showAlertOTP = true // ?
-            isSuccessOTP = showAlertOTP
+            isSuccessOTP = !showAlertOTP
         }
     }
 }

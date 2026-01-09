@@ -15,6 +15,8 @@ struct ResetPasswordView: View {
     @State private var showPassword = false
     @State private var showConfirmPassword = false
     private let validator = PasswordValidator()
+    @ObservedObject var resetPasswordViewModel = ResetPasswordViewModel()
+    @EnvironmentObject var appRootManager: AppRootManager
 
     private var validationResult: PasswordValidationResult {
         validator.validate(
@@ -48,9 +50,23 @@ struct ResetPasswordView: View {
             
             Button("Reset Password") {
                 print("API Call")
+                Task {
+                   await resetPasswordViewModel.callResetPassword(password: password, confirmPassword: confirmPassword)
+                }
             }
             .disabled(validationResult != .valid)
             .opacity(validationResult == .valid ? 1 : 0.5)
+            .alert(resetPasswordViewModel.isSuccess ? "Success" : "Error", isPresented: $resetPasswordViewModel.showAlert) {
+                Button("OK", role: .cancel) {
+                    if resetPasswordViewModel.isSuccess {
+                        appRootManager.reset()
+                    }
+                }
+            } message: {
+                
+                Text(resetPasswordViewModel.isSuccess ? "\(resetPasswordViewModel.successMessage ?? "")" : "\(resetPasswordViewModel.errorMessage ?? "")")
+            }
+
         }
         Spacer()
         .padding()

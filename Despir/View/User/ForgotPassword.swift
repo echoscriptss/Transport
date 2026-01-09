@@ -18,7 +18,6 @@ struct ForgotPassword: View {
 
     @ObservedObject var forgotPasswordViewModel = ForgotPasswordViewModel()
     @ObservedObject var verifyOTPViewModel = VerifyOTPViewModel()
-
     @EnvironmentObject var appRootManager: AppRootManager
 
     var body: some View {
@@ -77,9 +76,14 @@ struct ForgotPassword: View {
                 .alert(verifyOTPViewModel.isSuccessOTP ? "Success" : "Error", isPresented: $verifyOTPViewModel.showAlertOTP) {
                     Button("OK", role: .cancel) {
                         if verifyOTPViewModel.isSuccessOTP {
+                            
+                            if let token = verifyOTPViewModel.verifyOTPResponse?.data, !token.isEmpty {
+                                DataManager.userToken = token
+                            }
+//                            DataManager.userToken = verifyOTPViewModel.verifyOTPResponse?.data
                             print(verifyOTPViewModel.verifyOTPResponse?.data)
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                appRootManager.push(.ResetPassword)
+                                appRootManager.push(.resetPassword)
                                 
                             }
                         }

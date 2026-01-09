@@ -88,7 +88,7 @@ struct LoginView: View {
             
             // Forgot password
             AsyncActionButton {
-                appRootManager.push(.ForgotPassword)
+                appRootManager.push(.forgotPassword)
             } label: {
                 Text("Forgot Password")
                     .frame(maxWidth: .infinity)
@@ -107,10 +107,10 @@ struct LoginView: View {
 
                 VerifyView(viewModel: VerifyVM(temporaryToken: viewModel.loginData?.temporaryToken ?? ""))
             }
-            else if route == .ForgotPassword {
+            else if route == .forgotPassword {
                 ForgotPassword()
             }
-            else if route == .ResetPassword {
+            else if route == .resetPassword {
                 ResetPasswordView()
             }
         }

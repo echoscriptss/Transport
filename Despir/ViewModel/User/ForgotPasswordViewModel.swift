@@ -40,7 +40,7 @@ class ForgotPasswordViewModel: ObservableObject {
         catch {
             errorMessage = error.localizedDescription
             showAlert = true // ?
-            isSuccess = showAlert
+            isSuccess = !showAlert
         }
     }
     
