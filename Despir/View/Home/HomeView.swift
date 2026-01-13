@@ -18,10 +18,9 @@ struct HomeView: View {
         Text("Long press for settings")
           .font(.system(size: 20.0).bold())
           .contextMenu {
-            
             Button("Update Profile") {
+              appRootManager.push(.profile)
             }
-            
             Button("Change Password") {
               appRootManager.push(.changePassword)
             }
@@ -40,6 +39,8 @@ struct HomeView: View {
       .navigationDestination(for: Route.self) { route in
           if route == .changePassword {
               ChangePasswordView()
+          } else if route == .profile {
+            ProfileView()
           }
       }
     }

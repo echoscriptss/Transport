@@ -16,7 +16,7 @@ enum EndPoint: Equatable {
     case resetPassword
     case getRoles // Temp for get par in httpmethod
     case changePassword
-
+    case updateProfile
     
     var endpoint: String {
         switch self {
@@ -36,13 +36,15 @@ enum EndPoint: Equatable {
             return "/user/change_password"
         case .resetPassword:
             return "/user/reset_password"
+        case .updateProfile:
+          return "/user/update/\(DataManager.userUuid ?? "")"
 
         }
     }
     
     var httpMethod: HTTPMethod {
         switch self {
-        case .login, .verifyMfa, .resendOtpMfa, .forgotPassword, .changePassword , .verifyOTP, .resetPassword:
+        case .login, .verifyMfa, .resendOtpMfa, .forgotPassword, .changePassword , .verifyOTP, .resetPassword, .updateProfile:
             return .POST
         case .getRoles:
             return .GET

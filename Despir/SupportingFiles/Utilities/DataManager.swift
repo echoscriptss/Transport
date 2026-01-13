@@ -11,6 +11,7 @@ private enum Defaults: String {
    
     case isUserLoggedIn = "isUserLoggedIn"
     case userToken = "token"
+    case userUuid = "userUuid"
 }
 
 final class DataManager {
@@ -46,6 +47,14 @@ final class DataManager {
       }
   }
   
+  static var userUuid: String? {
+      get {
+        return _get(valueForKay: .userUuid) as? String
+      }
+      set {
+          _set(value: newValue, key: .userUuid)
+      }
+  }
 }
 
 struct DefaultStore {
