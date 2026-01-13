@@ -34,6 +34,7 @@ class VerifyVM: ObservableObject {
             showAlert = true
           } else {
             DataManager.userToken = verifyData?.data?.token
+            DataManager.userUuid = verifyData?.data?.profile?.uuid
           }
           print(verifyData ?? "")
         } catch {

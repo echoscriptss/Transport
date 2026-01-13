@@ -38,4 +38,5 @@ enum Route: Hashable {
     case changePassword
     case resetPassword
     case settings
+    case profile
 }
