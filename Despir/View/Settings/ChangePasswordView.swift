@@ -19,7 +19,7 @@ struct ChangePasswordView: View {
             .font(.system(size: 36.0).bold())
             .padding(.bottom,40)
         
-        TextField("Old Password", text: $viewModel.oldPassword)
+        SecureField("Old Password", text: $viewModel.oldPassword)
             .textInputAutocapitalization(.never)
             .autocorrectionDisabled()
             .padding()
@@ -27,7 +27,7 @@ struct ChangePasswordView: View {
             .cornerRadius(8)
             .padding([.leading,.trailing],10)
         
-        TextField("Password", text: $viewModel.password)
+        SecureField("Password", text: $viewModel.password)
             .textInputAutocapitalization(.never)
             .autocorrectionDisabled()
             .padding()
@@ -39,7 +39,7 @@ struct ChangePasswordView: View {
           Text(passwordMessage)
             .foregroundStyle(.red)
         }
-        TextField("Confirm Password", text: $viewModel.confirmPassword)
+        SecureField("Confirm Password", text: $viewModel.confirmPassword)
             .textInputAutocapitalization(.never)
             .autocorrectionDisabled()
             .padding()

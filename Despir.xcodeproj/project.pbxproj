@@ -30,6 +30,14 @@
 		008195352F0BF97200B2C837 /* APIManager in Frameworks */ = {isa = PBXBuildFile; productRef = 008195342F0BF97200B2C837 /* APIManager */; };
 		008195382F0BF98000B2C837 /* APIManager in Frameworks */ = {isa = PBXBuildFile; productRef = 008195372F0BF98000B2C837 /* APIManager */; };
 		00C843022F0E274F0020587D /* VerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C843012F0E274F0020587D /* VerifyView.swift */; };
+		00D280F12F14CC01005431BE /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D280EF2F14CC01005431BE /* ResetPasswordViewModel.swift */; };
+		00D280F22F14CC01005431BE /* VerifyOTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D280F02F14CC01005431BE /* VerifyOTPViewModel.swift */; };
+		00D280F52F14CC48005431BE /* VerifyOTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D280F42F14CC48005431BE /* VerifyOTPModel.swift */; };
+		00D280F62F14CC48005431BE /* ResetPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D280F32F14CC48005431BE /* ResetPasswordModel.swift */; };
+		00D280F92F14CC77005431BE /* ValidationManager in Frameworks */ = {isa = PBXBuildFile; productRef = 00D280F82F14CC77005431BE /* ValidationManager */; };
+		00D280FB2F14CCC8005431BE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D280FA2F14CCC8005431BE /* ProfileView.swift */; };
+		00D280FD2F14CD45005431BE /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D280FC2F14CD45005431BE /* ProfileViewModel.swift */; };
+		00D281002F14CE8A005431BE /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D280FF2F14CE8A005431BE /* ProfileModel.swift */; };
 		00D875432EF914690032D020 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D875422EF914690032D020 /* EndPoint.swift */; };
 		00D875462EF92D450032D020 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D875452EF92D450032D020 /* LoginVM.swift */; };
 		EC9BD2842F0E6E1700B4611A /* APIManager in Frameworks */ = {isa = PBXBuildFile; productRef = EC9BD2832F0E6E1700B4611A /* APIManager */; };
@@ -78,6 +86,13 @@
 		0069BA212F0D51CE0059A012 /* VerifyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyVM.swift; sourceTree = "<group>"; };
 		0069BA232F0D52370059A012 /* VerifyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyModel.swift; sourceTree = "<group>"; };
 		00C843012F0E274F0020587D /* VerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyView.swift; sourceTree = "<group>"; };
+		00D280EF2F14CC01005431BE /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
+		00D280F02F14CC01005431BE /* VerifyOTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPViewModel.swift; sourceTree = "<group>"; };
+		00D280F32F14CC48005431BE /* ResetPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordModel.swift; sourceTree = "<group>"; };
+		00D280F42F14CC48005431BE /* VerifyOTPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPModel.swift; sourceTree = "<group>"; };
+		00D280FA2F14CCC8005431BE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		00D280FC2F14CD45005431BE /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		00D280FF2F14CE8A005431BE /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		00D875422EF914690032D020 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		00D875452EF92D450032D020 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		EC9BD2852F0E720C00B4611A /* AsyncActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncActionButton.swift; sourceTree = "<group>"; };
@@ -112,6 +127,7 @@
 				008195382F0BF98000B2C837 /* APIManager in Frameworks */,
 				EC9BD2842F0E6E1700B4611A /* APIManager in Frameworks */,
 				008195352F0BF97200B2C837 /* APIManager in Frameworks */,
+				00D280F92F14CC77005431BE /* ValidationManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				002A94802F0FA7E2008816B6 /* ChangePasswordView.swift */,
+				00D280FA2F14CCC8005431BE /* ProfileView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -143,6 +160,7 @@
 		002A94822F0FA98C008816B6 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				00D280FC2F14CD45005431BE /* ProfileViewModel.swift */,
 				002A94832F0FA9A2008816B6 /* ChangePasswordVM.swift */,
 			);
 			path = Settings;
@@ -167,6 +185,8 @@
 		005F92FE2EF3CDD500315ED4 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				00D280F32F14CC48005431BE /* ResetPasswordModel.swift */,
+				00D280F42F14CC48005431BE /* VerifyOTPModel.swift */,
 				EC9BD28A2F0E84A800B4611A /* ForgotPasswordModel.swift */,
 				005F92FF2EF3CDEA00315ED4 /* UserModel.swift */,
 				0069BA232F0D52370059A012 /* VerifyModel.swift */,
@@ -206,6 +226,7 @@
 		00694E1D2EF27B280008927D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				00D280FE2F14CE78005431BE /* Settings */,
 				005F92FE2EF3CDD500315ED4 /* User */,
 			);
 			path = Model;
@@ -293,6 +314,14 @@
 			path = Extentsions;
 			sourceTree = "<group>";
 		};
+		00D280FE2F14CE78005431BE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				00D280FF2F14CE8A005431BE /* ProfileModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		00D86BF02EF5229100B8EC92 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +333,8 @@
 		00D875442EF92D300032D020 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				00D280EF2F14CC01005431BE /* ResetPasswordViewModel.swift */,
+				00D280F02F14CC01005431BE /* VerifyOTPViewModel.swift */,
 				EC9BD2882F0E842500B4611A /* ForgotPasswordViewModel.swift */,
 				00D875452EF92D450032D020 /* LoginVM.swift */,
 				0069BA212F0D51CE0059A012 /* VerifyVM.swift */,
@@ -343,6 +374,7 @@
 				008195342F0BF97200B2C837 /* APIManager */,
 				008195372F0BF98000B2C837 /* APIManager */,
 				EC9BD2832F0E6E1700B4611A /* APIManager */,
+				00D280F82F14CC77005431BE /* ValidationManager */,
 			);
 			productName = Despir;
 			productReference = 00694DC92EF278950008927D /* Despir.app */;
@@ -428,6 +460,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				EC9BD2822F0E6E1700B4611A /* XCRemoteSwiftPackageReference "APIManager" */,
+				00D280F72F14CC77005431BE /* XCRemoteSwiftPackageReference "ValidationManager" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 00694DCA2EF278950008927D /* Products */;
@@ -478,8 +511,13 @@
 				0069BA222F0D51CE0059A012 /* VerifyVM.swift in Sources */,
 				00D875432EF914690032D020 /* EndPoint.swift in Sources */,
 				00694E2B2EF27B280008927D /* SplashView.swift in Sources */,
+				00D280FD2F14CD45005431BE /* ProfileViewModel.swift in Sources */,
 				EC9BD28B2F0E84B100B4611A /* ForgotPasswordModel.swift in Sources */,
 				002A94812F0FA7E2008816B6 /* ChangePasswordView.swift in Sources */,
+				00D281002F14CE8A005431BE /* ProfileModel.swift in Sources */,
+				00D280FB2F14CCC8005431BE /* ProfileView.swift in Sources */,
+				00D280F52F14CC48005431BE /* VerifyOTPModel.swift in Sources */,
+				00D280F62F14CC48005431BE /* ResetPasswordModel.swift in Sources */,
 				005F93002EF3CDEA00315ED4 /* UserModel.swift in Sources */,
 				00694E362EF27BFD0008927D /* Utils.swift in Sources */,
 				EC9BD2892F0E843300B4611A /* ForgotPasswordViewModel.swift in Sources */,
@@ -491,6 +529,8 @@
 				EC9BD28F2F0EDB5500B4611A /* ResetPasswordView.swift in Sources */,
 				00694E2D2EF27B280008927D /* DespirApp.swift in Sources */,
 				002A94862F0FAC10008816B6 /* ChangePasswordModel.swift in Sources */,
+				00D280F12F14CC01005431BE /* ResetPasswordViewModel.swift in Sources */,
+				00D280F22F14CC01005431BE /* VerifyOTPViewModel.swift in Sources */,
 				00694E342EF27BB80008927D /* AppRootManager.swift in Sources */,
 				0069BA242F0D52370059A012 /* VerifyModel.swift in Sources */,
 				EC9BD28D2F0EB44400B4611A /* ForgotPassword.swift in Sources */,
@@ -840,6 +880,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		00D280F72F14CC77005431BE /* XCRemoteSwiftPackageReference "ValidationManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/echoscriptss/ValidationManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		EC9BD2822F0E6E1700B4611A /* XCRemoteSwiftPackageReference "APIManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/echoscriptss/APIManager.git";
@@ -874,6 +922,11 @@
 		008195372F0BF98000B2C837 /* APIManager */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = APIManager;
+		};
+		00D280F82F14CC77005431BE /* ValidationManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00D280F72F14CC77005431BE /* XCRemoteSwiftPackageReference "ValidationManager" */;
+			productName = ValidationManager;
 		};
 		EC9BD2832F0E6E1700B4611A /* APIManager */ = {
 			isa = XCSwiftPackageProductDependency;
