@@ -148,7 +148,6 @@
 				008195382F0BF98000B2C837 /* APIManager in Frameworks */,
 				EC9BD2842F0E6E1700B4611A /* APIManager in Frameworks */,
 				008195352F0BF97200B2C837 /* APIManager in Frameworks */,
-<
 				EC9BD2A22F10F27700B4611A /* ValidationManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,7 +208,6 @@
 			children = (
 				00D280F32F14CC48005431BE /* ResetPasswordModel.swift */,
 				00D280F42F14CC48005431BE /* VerifyOTPModel.swift */,
-=
 				EC9BD28A2F0E84A800B4611A /* ForgotPasswordModel.swift */,
 				005F92FF2EF3CDEA00315ED4 /* UserModel.swift */,
 				0069BA232F0D52370059A012 /* VerifyModel.swift */,
@@ -367,7 +365,6 @@
 			children = (
 				00D280EF2F14CC01005431BE /* ResetPasswordViewModel.swift */,
 				00D280F02F14CC01005431BE /* VerifyOTPViewModel.swift */,
-=
 				EC9BD2882F0E842500B4611A /* ForgotPasswordViewModel.swift */,
 				00D875452EF92D450032D020 /* LoginVM.swift */,
 				0069BA212F0D51CE0059A012 /* VerifyVM.swift */,
@@ -412,7 +409,6 @@
 				008195372F0BF98000B2C837 /* APIManager */,
 				EC9BD2832F0E6E1700B4611A /* APIManager */,
 				00D280F82F14CC77005431BE /* ValidationManager */,
-=
 			);
 			productName = Despir;
 			productReference = 00694DC92EF278950008927D /* Despir.app */;
@@ -498,10 +494,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				EC9BD2822F0E6E1700B4611A /* XCRemoteSwiftPackageReference "APIManager" */,
-<
-
-				EC9BD2A02F10F27700B4611A /* XCRemoteSwiftPackageReference "ValidationManager" */,
-
+				00D280F72F14CC77005431BE /* XCRemoteSwiftPackageReference "ValidationManager" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 00694DCA2EF278950008927D /* Products */;
@@ -564,22 +557,18 @@
 				00D280F52F14CC48005431BE /* VerifyOTPModel.swift in Sources */,
 				007F1FC82F1614FE00604DD1 /* SideMenuView.swift in Sources */,
 				00D280F62F14CC48005431BE /* ResetPasswordModel.swift in Sources */,
-=
 				005F93002EF3CDEA00315ED4 /* UserModel.swift in Sources */,
 				00694E362EF27BFD0008927D /* Utils.swift in Sources */,
 				EC9BD2892F0E843300B4611A /* ForgotPasswordViewModel.swift in Sources */,
 				00D875462EF92D450032D020 /* LoginVM.swift in Sources */,
 				007AB78F2F1774390061A0A8 /* QuestionnaireReminderView.swift in Sources */,
 				EC9BD2862F0E721A00B4611A /* AsyncActionButton.swift in Sources */,
-
 				00C843022F0E274F0020587D /* VerifyView.swift in Sources */,
 				005F92FD2EF3CDB300315ED4 /* UserRepository.swift in Sources */,
 				EC9BD2952F0FD0FF00B4611A /* VerifyOTPModel.swift in Sources */,
 				EC9BD28F2F0EDB5500B4611A /* ResetPasswordView.swift in Sources */,
 				EC9BD2932F0FC88000B4611A /* VerifyOTPViewModel.swift in Sources */,
 				002A94842F0FA9A2008816B6 /* ChangePasswordVM.swift in Sources */,
-
-
 				00694E2D2EF27B280008927D /* DespirApp.swift in Sources */,
 				002A94862F0FAC10008816B6 /* ChangePasswordModel.swift in Sources */,
 				00D280F12F14CC01005431BE /* ResetPasswordViewModel.swift in Sources */,
@@ -951,7 +940,6 @@
 				kind = branch;
 			};
 		};
-
 		EC9BD2A02F10F27700B4611A /* XCRemoteSwiftPackageReference "ValidationManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/echoscriptss/ValidationManager.git";
@@ -998,7 +986,6 @@
 			package = EC9BD2822F0E6E1700B4611A /* XCRemoteSwiftPackageReference "APIManager" */;
 			productName = APIManager;
 		};
-
 		EC9BD2A12F10F27700B4611A /* ValidationManager */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EC9BD2A02F10F27700B4611A /* XCRemoteSwiftPackageReference "ValidationManager" */;
