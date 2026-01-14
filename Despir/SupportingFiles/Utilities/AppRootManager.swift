@@ -24,7 +24,9 @@ final class AppRootManager: ObservableObject {
      }
 
      func pop() {
+       if path.count > 1 {
          path.removeLast()
+       }
      }
 
      func reset() {
