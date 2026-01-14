@@ -529,6 +529,7 @@
 				00D280FB2F14CCC8005431BE /* ProfileView.swift in Sources */,
 				00D280F52F14CC48005431BE /* VerifyOTPModel.swift in Sources */,
 				007F1FC82F1614FE00604DD1 /* SideMenuView.swift in Sources */,
+
 				00D280F62F14CC48005431BE /* ResetPasswordModel.swift in Sources */,
 				005F93002EF3CDEA00315ED4 /* UserModel.swift in Sources */,
 				00694E362EF27BFD0008927D /* Utils.swift in Sources */,
